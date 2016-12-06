@@ -40,6 +40,7 @@ echo
 
 # Cleanup install
 echo "Cleanup"
+rm dotdeb.gpg
 rm -r /var/lib/apt/lists/*
 
 exit 0;
