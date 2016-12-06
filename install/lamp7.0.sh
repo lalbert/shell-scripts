@@ -28,7 +28,7 @@ echo "Install PHP7"
 a2dismod mpm_event && a2enmod mpm_prefork proxy_fcgi
 echo "deb http://packages.dotdeb.org jessie all" > /etc/apt/sources.list.d/dotdeb.list
 wget https://www.dotdeb.org/dotdeb.gpg && apt-key add dotdeb.gpg
-apt-get update && apt-get install -y php7.0 php7.0-fpm php7.0-curl php7.0-gd php7.0-imagick php7.0-intl php7.0-json php7.0-mcrypt php7.0-mbstring php7.0-mysql php7.0-xsl --no-install-recommends
+apt-get update && apt-get install -y php7.0 php7.0-fpm php7.0-curl php7.0-gd php7.0-imagick php7.0-intl php7.0-json php7.0-mcrypt php7.0-mbstring php7.0-mysql php7.0-xsl php7.0-zip --no-install-recommends
 a2enconf php7.0-fpm
 service apache2 restart
 echo
