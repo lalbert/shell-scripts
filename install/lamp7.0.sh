@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Check if is root
+if [ "$EUID" -ne 0 ]
+	then echo "Please run as root"
+	exit 1
+fi
+
 # Update installed packages
 echo "Update installed packages"
 apt-get update && apt-get upgrade -y
